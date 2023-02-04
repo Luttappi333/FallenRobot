@@ -3,7 +3,7 @@ import os
 import time
 from io import BytesIO
 
-from telegram import Message, ParseMode
+from telegram import ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
@@ -112,7 +112,6 @@ def import_data(update, context):
         # TODO: some of that link logic
         # NOTE: consider default permissions stuff?
         if conn:
-
             text = "Backup fully restored on *{}*.".format(chat_name)
         else:
             text = "Backup fully restored"
